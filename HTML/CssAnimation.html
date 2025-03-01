@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CSS Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #cce7ff;
+            overflow: hidden;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 2em;
+            color: #333;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #555;
+        }
+        .animation-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 80vh;
+            position: relative;
+        }
+        .cloud {
+            position: absolute;
+            width: 150px;
+            height: 80px;
+            background: white;
+            border-radius: 50px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .cloud::before, .cloud::after {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+        .cloud::before {
+            width: 100px;
+            height: 100px;
+            top: -50px;
+            left: 10px;
+        }
+        .cloud::after {
+            width: 120px;
+            height: 120px;
+            top: -60px;
+            right: 10px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #151fb6, #ff0000);
+            position: relative;
+            border-radius: 50%;
+            animation: bounce 2s infinite ease-in-out, rotate 2s infinite linear;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-200px) rotate(180deg);
+            }
+        }
+        @keyframes moveClouds {
+            0% {
+                transform: translateX(-20px);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+        .cloud-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2px;
+        }
+        .cloud-bottom {
+            width: 110px;
+            height: 50px;
+            background: white;
+            border-radius: 50px;
+            margin: 2px;
+            position: relative;
+        }
+        .cloud-bottom::before, .cloud-bottom::after {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+        .cloud-bottom::before {
+            width: 70px;
+            height: 70px;
+            top: -35px;
+            left: 5px;
+        }
+        .cloud-bottom::after {
+            width: 90px;
+            height: 90px;
+            top: -45px;
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ball is Bouncing on Clouds</h1>
+    <div class="animation-container">
+        <div class="box"></div>
+    </div>
+    <div class="cloud-container">
+        <div class="cloud-bottom"></div>
+        <div class="cloud-bottom"></div>
+        <div class="cloud-bottom"></div>
+        <div class="cloud-bottom"></div>
+        <div class="cloud-bottom"></div>
+        <div class="cloud-bottom"></div>
+        <div class="cloud-bottom"></div>
+        <div class="cloud-bottom"></div>
+    </div>
+</body>
+</html>

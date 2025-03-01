@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Effect</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .parallax {
+            background-image: url('https://wallpapers.com/images/hd/parallax-background-hb9fl02o6zsu6s1c.jpg');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .content {
+            padding: 50px;
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">Parallax Scrolling</div>
+    <div class="content">
+        <h2>About Parallax</h2>
+        <p>Parallax scrolling is a web design effect where the background moves at a slower pace than the foreground, creating an illusion of depth.</p>
+    </div>
+    <div class="parallax"></div>
+    <div class="content">
+        <h2>History of Parallax</h2>
+        <p>The parallax effect was first used in traditional animation and video games to create a sense of depth by moving background layers at different speeds.</p>
+    </div>
+    <div class="parallax"></div>
+    <div class="content">
+        <h2>Parallax in Web Design</h2>
+        <p>Modern websites use parallax scrolling to enhance visual storytelling, making web pages more engaging and interactive.</p>
+    </div>
+    <div class="parallax"></div>
+    <div class="content">
+        <h2>Benefits of Parallax</h2>
+        <p>Parallax scrolling improves user experience by adding depth and motion, making content more dynamic and visually appealing.</p>
+    </div>
+</body>
+</html>
